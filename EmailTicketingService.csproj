@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-EmailTicketingService-37048ba8-dcf4-4f07-b86c-03d17ef93228</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Anthropic.SDK" Version="5.8.0" />
+    <PackageReference Include="Azure.Identity" Version="1.17.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Graph" Version="5.100.0" />
+  </ItemGroup>
+</Project>

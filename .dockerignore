@@ -1,0 +1,36 @@
+# Build outputs
+bin/
+obj/
+**/bin/
+**/obj/
+
+# IDE and editor files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+docs/
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Database files should not be in image (but keep Data/ folder with source code)
+*.db
+*.db-shm
+*.db-wal
+
+# Logs
+logs/
+*.log

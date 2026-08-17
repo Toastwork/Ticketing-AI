@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "EmailTicketingService": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "TicketingApi__BaseUrl": "https://ged.acskm.fr/intranet_acs/contents/ticketing",
+        "TicketingApi__Token": "Bearer >3>*tD[_80sAWiHKHk+SN8L2"
+      }
+    }
+  }
+}
