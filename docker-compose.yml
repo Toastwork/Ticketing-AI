@@ -1,7 +1,10 @@
 services:
   # Service Info - support@acskm.fr (service_id: 2)
   email-ticketing-service:
-    image: ghcr.io/xfrg73/emailticketingservice:latest
+    image: ghcr.io/toastwork/ticketing-ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: email-ticketing-service
     restart: unless-stopped
     environment:
@@ -26,7 +29,10 @@ services:
 
   # Service Zeendoc - support.zeendoc@acskm.fr (service_id: 3)
   email-ticketing-zeendoc:
-    image: ghcr.io/xfrg73/emailticketingservice:latest
+    image: ghcr.io/toastwork/ticketing-ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: email-ticketing-zeendoc
     restart: unless-stopped
     environment:
