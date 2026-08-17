@@ -26,31 +26,3 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-
-  # Service Zeendoc - support.zeendoc@acskm.fr (service_id: 3)
-  email-ticketing-zeendoc:
-    image: ghcr.io/toastwork/ticketing-ai:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: email-ticketing-zeendoc
-    restart: unless-stopped
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - AzureAd__TenantId=${AZURE_TENANT_ID}
-      - AzureAd__ClientId=${AZURE_CLIENT_ID}
-      - AzureAd__ClientSecret=${AZURE_CLIENT_SECRET}
-      - Email__SharedMailboxAddress=${ZEENDOC_MAILBOX}
-      - Email__PollingIntervalMinutes=${POLLING_INTERVAL_MINUTES:-5}
-      - Email__ServiceId=${ZEENDOC_SERVICE_ID:-3}
-      - Claude__ApiKey=${CLAUDE_API_KEY}
-      - Gemini__ApiKey=${GEMINI_API_KEY}
-      - TicketingApi__BaseUrl=${TICKETING_API_URL}
-      - TicketingApi__Token=${TICKETING_API_TOKEN}
-    volumes:
-      - /home/administrateur/data/email-ticketing-zeendoc/data:/app/data
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
